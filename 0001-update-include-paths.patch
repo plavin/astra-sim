@@ -1,0 +1,67 @@
+From c75e273b966dd69f20eee1b02b75892ecd9f73fc Mon Sep 17 00:00:00 2001
+From: Patrick Lavin <plavin997@gmail.com>
+Date: Thu, 25 Jun 2026 15:27:31 -0600
+Subject: [PATCH] update include paths
+
+---
+ src/feeder_v3/common.h            | 2 +-
+ src/feeder_v3/dependancy_solver.h | 2 +-
+ src/feeder_v3/et_feeder.h         | 2 +-
+ src/feeder_v3/et_feeder_node.h    | 2 +-
+ 4 files changed, 4 insertions(+), 4 deletions(-)
+
+diff --git a/src/feeder_v3/common.h b/src/feeder_v3/common.h
+index 9388232..a7a7b57 100644
+--- a/src/feeder_v3/common.h
++++ b/src/feeder_v3/common.h
+@@ -1,7 +1,7 @@
+ #ifndef CHAKRA_FEEDER_V3_COMMON_H
+ #define CHAKRA_FEEDER_V3_COMMON_H
+ #include <cstdint>
+-#include "et_def.pb.h"
++#include "chakra/schema/protobuf/et_def.pb.h"
+ 
+ namespace Chakra {
+ namespace FeederV3 {
+diff --git a/src/feeder_v3/dependancy_solver.h b/src/feeder_v3/dependancy_solver.h
+index bc422e1..e77e73d 100644
+--- a/src/feeder_v3/dependancy_solver.h
++++ b/src/feeder_v3/dependancy_solver.h
+@@ -6,7 +6,7 @@
+ #include <unordered_map>
+ #include <unordered_set>
+ #include "common.h"
+-#include "et_def.pb.h"
++#include "chakra/schema/protobuf/et_def.pb.h"
+ 
+ namespace Chakra {
+ namespace FeederV3 {
+diff --git a/src/feeder_v3/et_feeder.h b/src/feeder_v3/et_feeder.h
+index 39cbf7e..4a5b232 100644
+--- a/src/feeder_v3/et_feeder.h
++++ b/src/feeder_v3/et_feeder.h
+@@ -9,7 +9,7 @@
+ #include "cache.h"
+ #include "common.h"
+ #include "dependancy_solver.h"
+-#include "et_def.pb.h"
++#include "chakra/schema/protobuf/et_def.pb.h"
+ #include "et_feeder_node.h"
+ 
+ namespace std {
+diff --git a/src/feeder_v3/et_feeder_node.h b/src/feeder_v3/et_feeder_node.h
+index c5bbfa5..aad9a69 100644
+--- a/src/feeder_v3/et_feeder_node.h
++++ b/src/feeder_v3/et_feeder_node.h
+@@ -4,7 +4,7 @@
+ #include <functional>
+ #include <memory>
+ #include "common.h"
+-#include "et_def.pb.h"
++#include "chakra/schema/protobuf/et_def.pb.h"
+ 
+ namespace Chakra {
+ namespace FeederV3 {
+-- 
+2.43.7
+
