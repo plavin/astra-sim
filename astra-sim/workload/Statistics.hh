@@ -8,7 +8,7 @@
 #include <optional>
 #include <unordered_map>
 
-#include "extern/graph_frontend/chakra/src/feeder_v3/et_feeder.h"
+#include "chakra/src/feeder_v3/et_feeder.h"
 
 typedef ChakraProtoMsg::NodeType ChakraNodeType;
 

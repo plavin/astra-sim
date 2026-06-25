@@ -85,6 +85,7 @@ endif()
 
 # Include Directories
 target_include_directories(AstraSim PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_include_directories(AstraSim PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/extern/graph_frontend/)
 target_include_directories(AstraSim PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/extern/graph_frontend/chakra/)
 target_include_directories(AstraSim PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/extern/graph_frontend/chakra/schema/protobuf)
 target_include_directories(AstraSim PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/extern/graph_frontend/chakra/src/third_party/utils)
@@ -119,6 +120,16 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/extern/helper/spdlog/include/spdlo
         PATTERN "*.h")
 
 install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/extern/helper/spdlog_setup
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+        FILES_MATCHING
+        PATTERN "*.h")
+
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/extern/helper/json
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+        FILES_MATCHING
+        PATTERN "*.hpp")
+
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/extern/graph_frontend/chakra
         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
         FILES_MATCHING
         PATTERN "*.h")

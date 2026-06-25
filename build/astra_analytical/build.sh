@@ -38,7 +38,7 @@ function setup() {
 function compile_astrasim_analytical() {
   # compile AstraSim
   cd "${BUILD_DIR:?}" || exit
-  cmake .. -DBUILDTARGET="$1"
+  cmake .. -DBUILDTARGET="$1" -DCMAKE_C_COMPILER=$(which gcc) -DCMAKE_CXX_COMPILER=$(which g++)
   cmake --build . -j "${NUM_THREADS:?}"
 }
 
