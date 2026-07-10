@@ -138,3 +138,10 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/extern/remote_memory_backend/analy
         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
         FILES_MATCHING
         PATTERN "*.hh")
+
+file(GLOB YAML_CPP_LIBS
+        "${CMAKE_BINARY_DIR}/_deps/yaml-cpp-build/libyaml-cpp.so*"
+)
+install(FILES ${YAML_CPP_LIBS}
+        DESTINATION lib64
+)
