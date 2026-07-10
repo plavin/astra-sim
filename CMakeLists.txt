@@ -133,3 +133,8 @@ install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/extern/graph_frontend/chakra
         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
         FILES_MATCHING
         PATTERN "*.h")
+
+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/extern/remote_memory_backend/analytical
+        DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
+        FILES_MATCHING
+        PATTERN "*.hh")
